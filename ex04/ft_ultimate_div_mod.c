@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pecosta- <pecosta-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 14:53:56 by pecosta-          #+#    #+#             */
-/*   Updated: 2022/09/14 16:33:50 by pecosta-         ###   ########.fr       */
+/*   Created: 2022/09/12 17:43:33 by pecosta-          #+#    #+#             */
+/*   Updated: 2022/09/14 16:51:25 by pecosta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	<unistd.h>
-//#include <stdio.h>
+//#include	<stdio.h>
 
-void	ft_ultimate_fr(int *********nbr);
+void	ft_ultimate_div_mod(int *a, int *b);
 
-/*int	main()
+/*int	main(void)
 {
-	int	A = 25;
-	int * ptr1 = &A;
-   	int ** ptr2 = &ptr1;
-	int *** ptr3 = &ptr2;
-	int	**** ptr4 = &ptr3;
-	int ***** ptr5 = &ptr4;
-	int	****** ptr6 = &ptr5;
-	int ******* ptr7 = &ptr6;
-	int ******** ptr8 = &ptr7;
-	int ********* ptr9 = &ptr8;	
-	ft_ultimate_fr(ptr9);
-	printf("%d", A);
-	
+	int a = 50;
+	int b = 25;
+	ft_ultimate_div_mod(&a, &b);
+	printf("O valor de A e %d e o valor de B e %d", a, b);
+
 }*/
 
-void	ft_ultimate_fr(int *********nbr)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	*********nbr = 42;
-}	
+	int		auxl1;
+	int		auxl2;
+
+	auxl1 = *a / *b;
+	auxl2 = *a % *b;
+	*a = auxl1;
+	*b = auxl2;
+}

@@ -1,38 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pecosta- <pecosta-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 14:53:56 by pecosta-          #+#    #+#             */
-/*   Updated: 2022/09/14 16:33:50 by pecosta-         ###   ########.fr       */
+/*   Created: 2022/09/14 15:17:41 by pecosta-          #+#    #+#             */
+/*   Updated: 2022/09/14 16:27:15 by pecosta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	<unistd.h>
-//#include <stdio.h>
+//#include	<stdio.h>
 
-void	ft_ultimate_fr(int *********nbr);
+void	ft_rev_int_tab(int *tab, int size);
 
 /*int	main()
 {
-	int	A = 25;
-	int * ptr1 = &A;
-   	int ** ptr2 = &ptr1;
-	int *** ptr3 = &ptr2;
-	int	**** ptr4 = &ptr3;
-	int ***** ptr5 = &ptr4;
-	int	****** ptr6 = &ptr5;
-	int ******* ptr7 = &ptr6;
-	int ******** ptr8 = &ptr7;
-	int ********* ptr9 = &ptr8;	
-	ft_ultimate_fr(ptr9);
-	printf("%d", A);
-	
+	int	tab[9] = {5, 25, 35, 45, 55, 65, 75, 85, 95};
+	int	size	=  9;
+	ft_rev_int_tab(tab, size);
+	int	i = 0;
+	while (i <= 8)
+	{
+		printf("%d\n", tab[i]);
+		i++;
+	}
 }*/
 
-void	ft_ultimate_fr(int *********nbr)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	*********nbr = 42;
-}	
+	int		i;
+	int		swap;
+
+	i = 0;
+	while (i < size / 2)
+	{
+		swap = tab[i];
+		tab [i] = tab [size - 1 - i];
+		tab [size - 1 - i] = swap;
+		i++;
+	}
+}		
